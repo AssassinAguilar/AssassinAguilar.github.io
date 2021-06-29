@@ -1,9 +1,9 @@
-@import "./variables";
-@import "./mixins";
-@import "./functions";
-@import "./resets";
+@import "variables";
+@import "mixins";
+@import "functions";
+@import "resets";
 
-@include google-font("Lobster+Two", Lobster Two, cursive, ".top-nav__container__title");
+@include google-font ("Lobster+Two", Lobster Two, cursive, ".top-nav__container__title");
 
 // Side Nav
 
@@ -30,11 +30,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    @include flex(space-between);
+    @include flex (space-between);
     width: 100vw;
     padding: 10px;
     background-color: $black;
     box-shadow: $box-shadow;
+    z-index: 1;
     #{&}__container
     {
         @include flex;
@@ -48,7 +49,7 @@
                 left: 15px;
             };
             font-size: 22px;
-            font-weight: weight(medium);
+            font-weight: weight(normal);
             letter-spacing: 2px;
         }
     }
@@ -56,4 +57,4 @@
 
 // Top Nav
 
-@import "./home";
+@import "home";

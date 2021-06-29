@@ -1,0 +1,20 @@
+.home
+{
+    @include fullScreen (0);
+    @include backgroundImage ("../assets/home_pc.jpg");
+    @include resp (600px) {
+        @include backgroundImage ("../assets/home.jpg");
+    };
+    #{&}__container
+    {
+        position: relative;
+        margin: {
+            top: 70px;
+            left: 20px;
+        };
+        *
+        {
+            color: $black;
+        }
+    }
+}

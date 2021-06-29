@@ -72,6 +72,7 @@ html {
   padding: 10px;
   background-color: #222222;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .top-nav .top-nav__container {
@@ -89,6 +90,44 @@ html {
 .top-nav .top-nav__container__title {
   margin-left: 15px;
   font-size: 22px;
+  font-weight: 500;
   letter-spacing: 2px;
+}
+
+.home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 0;
+  background-image:  url("../assets/home_pc.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 600px) {
+  .home {
+    background-image:  url("../assets/home.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.home .home__container {
+  position: relative;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+.home .home__container * {
+  color: #222222;
 }
 /*# sourceMappingURL=main.css.map */
