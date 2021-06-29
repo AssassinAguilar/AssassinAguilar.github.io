@@ -3,7 +3,56 @@
 @import "./functions";
 @import "./resets";
 
+@include google-font("Lobster+Two", Lobster Two, cursive, ".top-nav__container__title");
+
 // Side Nav
+
+.side-nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80%;
+    background-color: $black;
+    box-shadow: $box-shadow;
+    transform: translateX(-100%);
+    @include transition;
+    z-index: 2;
+    &.show
+    {
+        transform: translateX(0);
+    }
+}
+
+.top-nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include flex(space-between);
+    width: 100vw;
+    padding: 10px;
+    background-color: $black;
+    box-shadow: $box-shadow;
+    #{&}__container
+    {
+        @include flex;
+        &__icon
+        {
+            cursor: pointer;
+        }
+        &__title
+        {
+            margin: {
+                left: 15px;
+            };
+            font-size: 22px;
+            font-weight: weight(medium);
+            letter-spacing: 2px;
+        }
+    }
+}
 
 // Top Nav
 

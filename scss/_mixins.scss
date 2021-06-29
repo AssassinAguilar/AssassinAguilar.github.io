@@ -10,7 +10,7 @@
     z-index: $zIndex;
 }
 
-@mixin flex ($justify: center, $align: center, $flex: flex, $direction: column, $wrap: nowrap) {
+@mixin flex ($justify: center, $align: center, $flex: flex, $direction: row, $wrap: nowrap) {
     display: $flex;
     justify-content: $justify;
     align-items: $align;
