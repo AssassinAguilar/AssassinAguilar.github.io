@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+*,
+* *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    outline: none;
+    border: none;
+    color: $white;
+    font-family: "Montserrat", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    &::-webkit-scrollbar
+    {
+        height: 5px;
+        width: 5px;
+        background-color: transparent;
+        &-thumb
+        {
+            height: 20vh;
+            width: 20vw;
+            border-radius: 50px;
+            background-color: $blue;
+            &:hover
+            {
+                background-color: $red;
+            }
+        }
+    }
+}

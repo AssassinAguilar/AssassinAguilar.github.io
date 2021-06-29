@@ -1,0 +1,11 @@
+@function weight ($wName) {
+    @return map-get($fontWeigths, $wName);
+}
+
+@function setColor ($color) {
+    @if lightness($color) > 70% {
+        @return $black;
+    } @else {
+        @return $white;
+    }
+}

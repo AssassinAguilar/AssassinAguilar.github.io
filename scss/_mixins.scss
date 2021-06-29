@@ -1,0 +1,45 @@
+@mixin fullScreen ($zIndex) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: $zIndex;
+}
+
+@mixin flex ($justify: center, $align: center, $flex: flex, $direction: column, $wrap: nowrap) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin backgroundImage ($url: "https://cdn.jsdelivr.net/gh/AssassinAguilar/FileHosting/Lyrically/Wallpaper.jpg", $size: cover, $position: center, $gradient: "") {
+    background-image: #{$gradient} url($url);
+    background-attachment: fixed;
+    background-position: $position;
+    background-size: $size;
+    background-repeat: no-repeat;
+}
+
+@mixin google-font ($family, $fontName, $fontAccent, $element...) {
+    @import url("https://fonts.googleapis.com/css?family=#{$family}&display=swap");
+    #{$element}
+    {
+        font-family: "#{$fontName}", #{$fontAccent};
+    }
+}
+
+@mixin resp ($respVal, $respMax_Min: max, $respH_W: width) {
+    @media (#{$respMax_Min}-#{$respH_W}: $respVal) {
+        @content;
+    }
+}
+
+@mixin transition {
+    transition: all 0.3s ease-in-out;
+}
