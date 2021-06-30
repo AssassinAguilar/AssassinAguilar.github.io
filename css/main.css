@@ -134,7 +134,7 @@ html {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .home {
     background-image:  url("../assets/images/home.jpg");
     background-attachment: fixed;
@@ -153,7 +153,12 @@ html {
 .home .home__container * {
   letter-spacing: 2px;
   word-spacing: 5px;
-  color: #222222;
+}
+
+@media (min-width: 650px) {
+  .home .home__container * {
+    color: #222222;
+  }
 }
 
 .home .home__container__title {
@@ -167,7 +172,45 @@ html {
 }
 
 .home .home__container__subTitle__animatedText {
-  color: #777777;
+  color: #222222;
   font-weight: 900;
+}
+
+@media (min-width: 650px) {
+  .home .home__container__subTitle__animatedText {
+    color: #777777;
+  }
+}
+
+.home .home__container__two {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home .home__container__two__logo path {
+  fill: transparent;
+  stroke: #f5f5f5;
+  stroke-dasharray: 225;
+  stroke-dashoffset: 0;
+  animation: animateLogo 5s linear infinite;
+}
+
+@keyframes animateLogo {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 225;
+  }
+  80% {
+    stroke-dashoffset: 450;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 450;
+    fill: #f5f5f5;
+  }
 }
 /*# sourceMappingURL=main.css.map */

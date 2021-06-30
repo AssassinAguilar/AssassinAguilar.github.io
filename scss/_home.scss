@@ -6,7 +6,7 @@
 {
     @include fullScreen (0);
     @include backgroundImage ("../assets/images/home_pc.jpg");
-    @include resp (600px) {
+    @include resp (650px) {
         @include backgroundImage ("../assets/images/home.jpg");
     };
     #{&}__container
@@ -20,7 +20,9 @@
         {
             letter-spacing: 2px;
             word-spacing: 5px;
-            color: $black;
+            @include resp (650px, min) {
+                color: $black;
+            }
         }
         &__title
         {
@@ -33,9 +35,52 @@
             font-weight: weight(semi-bold);
             &__animatedText
             {
-                color: $grey;
+                color: $black;
                 font-weight: weight(boldest);
+                @include resp (650px, min) {
+                    color: $grey;
+                }
             }
         }
+    }
+    #{&}__container__two
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &__logo
+        {
+            path
+            {
+                fill: transparent;
+                stroke: $white;
+                stroke-dasharray: 225;
+                stroke-dashoffset: 0;
+                animation: animateLogo 5s linear infinite;
+            }
+        }
+    }
+}
+
+@keyframes animateLogo
+{
+    0%
+    {
+        stroke-dashoffset: 0;
+    }
+    40%
+    {
+        stroke-dashoffset: 225;
+    }
+    80%
+    {
+        stroke-dashoffset: 450;
+        fill: transparent;
+    }
+    100%
+    {
+        stroke-dashoffset: 450;
+        fill: $white;
     }
 }
