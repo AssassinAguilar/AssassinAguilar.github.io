@@ -127,6 +127,10 @@ html {
   margin-left: 20px;
 }
 
+.home .home__container__title {
+  font-size: 50px;
+}
+
 .home .home__container * {
   color: #222222;
 }
