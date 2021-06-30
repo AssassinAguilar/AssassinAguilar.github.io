@@ -1,9 +1,13 @@
+@include google-font("Permanent+Marker", Permanent Marker, cursive, ".home__container__title");
+@include google-font("Permanent+Marker", Permanent Marker, cursive, ".home__container__subTitle");
+@include google-font("Josefin+Sans", Josefin Sans, sans-serif, ".home__container__subTitle__animatedText");
+
 .home
 {
     @include fullScreen (0);
-    @include backgroundImage ("../assets/home_pc.jpg");
+    @include backgroundImage ("../assets/images/home_pc.jpg");
     @include resp (600px) {
-        @include backgroundImage ("../assets/home.jpg");
+        @include backgroundImage ("../assets/images/home.jpg");
     };
     #{&}__container
     {
@@ -12,13 +16,26 @@
             top: 70px;
             left: 20px;
         };
-        &__title
-        {
-            font-size: 50px;
-        }
         *
         {
+            letter-spacing: 2px;
+            word-spacing: 5px;
             color: $black;
+        }
+        &__title
+        {
+            font-size: 70px;
+        }
+        &__subTitle
+        {
+            position: relative;
+            font-size: 40px;
+            font-weight: weight(semi-bold);
+            &__animatedText
+            {
+                color: $grey;
+                font-weight: weight(boldest);
+            }
         }
     }
 }

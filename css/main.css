@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("https://fonts.googleapis.com/css?family=Lobster+Two&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
 *,
 * * {
   margin: 0;
@@ -84,14 +87,34 @@ html {
 }
 
 .top-nav .top-nav__container__icon {
+  height: 35px;
+  width: 35px;
+  background-image:  url("../assets/icons/menu.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: initial;
   cursor: pointer;
 }
 
 .top-nav .top-nav__container__title {
-  margin-left: 15px;
-  font-size: 22px;
+  margin-left: 20px;
+  font-size: 25px;
   font-weight: 500;
   letter-spacing: 2px;
+}
+
+.home__container__title {
+  font-family: "Permanent Marker", cursive;
+}
+
+.home__container__subTitle {
+  font-family: "Permanent Marker", cursive;
+}
+
+.home__container__subTitle__animatedText {
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .home {
@@ -104,7 +127,7 @@ html {
   width: 100vw;
   overflow: hidden;
   z-index: 0;
-  background-image:  url("../assets/home_pc.jpg");
+  background-image:  url("../assets/images/home_pc.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -113,7 +136,7 @@ html {
 
 @media (max-width: 600px) {
   .home {
-    background-image:  url("../assets/home.jpg");
+    background-image:  url("../assets/images/home.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -127,11 +150,24 @@ html {
   margin-left: 20px;
 }
 
-.home .home__container__title {
-  font-size: 50px;
+.home .home__container * {
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  color: #222222;
 }
 
-.home .home__container * {
-  color: #222222;
+.home .home__container__title {
+  font-size: 70px;
+}
+
+.home .home__container__subTitle {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.home .home__container__subTitle__animatedText {
+  color: #777777;
+  font-weight: 900;
 }
 /*# sourceMappingURL=main.css.map */

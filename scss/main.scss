@@ -41,14 +41,18 @@
         @include flex;
         &__icon
         {
+            height: 35px;
+            width: 35px;
+            @include backgroundImage("../assets/icons/menu.svg");
+            background-attachment: initial;
             cursor: pointer;
         }
         &__title
         {
             margin: {
-                left: 15px;
+                left: 20px;
             };
-            font-size: 22px;
+            font-size: 25px;
             font-weight: weight(normal);
             letter-spacing: 2px;
         }

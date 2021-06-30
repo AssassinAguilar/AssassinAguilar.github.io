@@ -1,4 +1,5 @@
-import { $, $$, handleSideNav } from "./functions.js";
+import { $, handleSideNav } from "./functions.js";
+import "./typed.js";
 
 $("#menuBtn").onclick = () => handleSideNav (false);
 
